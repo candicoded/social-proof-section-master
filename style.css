@@ -16,7 +16,9 @@
 
 body {
   text-align: center;
-  background-image: url(./images/bg-pattern-top-mobile.svg);
+  background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom center;
 }
 
 main {
@@ -88,4 +90,87 @@ footer {
   text-align: center;
   bottom: 0;
   left: 0;
+}
+
+@media screen and (min-width: 48em) {
+  
+  body {
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom -15vh right;
+  }
+
+  main {
+    margin-left: 9em;
+    margin-right: 9em;
+  }
+
+  .desktop-row1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 2em;
+  }
+
+  .desktop-column1 {
+    width: 71%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h1, .customers-say {
+    text-align: left;
+  }
+
+  .customers-say {
+    line-height: 1.5;
+  }
+
+  .rated:nth-child(1) {
+    margin-right: 6em;
+  }
+
+  .rated:nth-child(2) {
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+
+  .rated:nth-child(3) {
+    margin-left: 6em;
+  }
+
+  .stars {
+    display: inline;
+    margin-right: 2em;
+  }
+
+  .stars img {
+    margin-right: 0.3em;
+  }
+
+  .review-container {
+    display: flex;
+    gap: 2em;
+  }
+
+  .review {
+    margin: 0;
+  }
+
+  .review:nth-child(1) {
+    margin-bottom: 2em;
+  }
+
+  .review:nth-child(2) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .review:nth-child(3) {
+    margin-top: 2em;
+  }
+
+  .review img {
+    width: 15%;
+  }
 }
